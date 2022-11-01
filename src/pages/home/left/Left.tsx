@@ -1,4 +1,5 @@
 import Navbar from "../../../components/Navbar";
+import PeopleCard from "../../../components/PeopleCard";
 import ProfileCard from "../../../components/ProfileCard";
 
 const Left = () => {
@@ -8,6 +9,10 @@ const Left = () => {
       <Navbar />
       <div className="w-full my-2">
         <ProfileCard />
+      </div>
+      <div className="content my-4 ml-2">
+        <p className="font-bold">People You May Know</p>
+        <PeopleCard />
       </div>
     </div>
   );
