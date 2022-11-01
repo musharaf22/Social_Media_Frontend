@@ -1,16 +1,13 @@
-import React from "react";
-import { BsTwitter } from "react-icons/bs";
+import Navbar from "../../../components/Navbar";
+import ProfileCard from "../../../components/ProfileCard";
+
 const Left = () => {
   return (
-    <div className="w-[25%] m-5  ">
-      <div className="bg-blue-200 w-[15%] absolute h-[40vh] z-[-1] blur-lg top-[10%] left-0 "></div>
-      <div className="search flex  items-center">
-        <BsTwitter size={40} className="text-[#FCBA3E]" />
-        <input
-          type="text"
-          className=" border border-gray-400 rounded-xl p-[3px] bg-gray-100 ml-2"
-          placeholder="#Explore"
-        />
+    <div className="w-fit ml-5 my-2  flex flex-col ">
+      <div className="bg-[#B6E0F3] w-[10%] absolute h-[60vh] rounded-full z-[-1] blur-lg top-[20%] left-0 "></div>
+      <Navbar />
+      <div className="w-full my-2">
+        <ProfileCard />
       </div>
     </div>
   );
