@@ -1,10 +1,15 @@
 import React from "react";
 import Left from "./left/Left";
+import Right from "./right/Right";
 
 const Home = () => {
   return (
-    <div>
+    <div className="flex justify-between">
       <Left />
+      <div></div>
+      <div className="mr-8 m-5">
+        <Right />
+      </div>
     </div>
   );
 };
