@@ -7,7 +7,7 @@ const Home = () => {
     <div className="flex justify-between">
       <Left />
       <div></div>
-      <div className="mr-8 m-5">
+      <div className="mr-8 m-5  w-[25%]">
         <Right />
       </div>
     </div>
