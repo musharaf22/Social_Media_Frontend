@@ -1,6 +1,6 @@
-import Navbar from "../../../components/Navbar";
-import PeopleCard from "../../../components/PeopleCard";
-import ProfileCard from "../../../components/ProfileCard";
+import Navbar from "../../components/Navbar";
+import PeopleCard from "../../components/PeopleCard";
+import ProfileCard from "../../components/ProfileCard";
 
 const Left = () => {
   return (
