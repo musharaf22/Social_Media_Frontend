@@ -2,7 +2,10 @@ import React from "react";
 
 const PeopleCard = () => {
   return (
-    <div className="bg-white w-full  rounded-xl p-3 h-[230px] overflow-auto">
+    <div
+      id="postScroll"
+      className="bg-white w-full  rounded-xl p-3 h-[230px] overflow-auto"
+    >
       {[1, 2, 3, 4, 5].map(() => {
         return (
           <div className="people flex items-center justify-between my-3">
