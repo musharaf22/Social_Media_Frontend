@@ -3,7 +3,7 @@ import { FaRegCommentDots } from "react-icons/fa";
 import { FiShare2 } from "react-icons/fi";
 const Post = () => {
   return (
-    <div className="w-full rounded-lg bg-white h-[500px] flex flex-col">
+    <div className="w-full rounded-lg bg-white h-auto flex flex-col ">
       <div className="image">
         <img
           src="/images/postpic2.jpg"
