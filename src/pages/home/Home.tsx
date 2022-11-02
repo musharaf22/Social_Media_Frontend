@@ -9,7 +9,14 @@ const Home = () => {
       <div className="w-[20%]">
         <Left />
       </div>
-      <div className="mt-[4.4%] w-[50%] ml-[2.5%] ">
+      <div
+        id="postScroll"
+        className="mt-[4.4%] w-[50%] ml-[2.5%] max-h-[90vh] overflow-auto "
+      >
+        <Post />
+        <Post />
+        <Post />
+        <Post />
         <Post />
       </div>
       <div className="mr-8 m-5  w-[25%] ">
