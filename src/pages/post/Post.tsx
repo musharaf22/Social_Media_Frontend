@@ -1,7 +1,9 @@
+import { useState } from "react";
 import { BsFillHeartFill, BsHeart } from "react-icons/bs";
 import { FaRegCommentDots } from "react-icons/fa";
 import { FiShare2 } from "react-icons/fi";
 const Post = () => {
+  const [like, setlike] = useState<boolean>(false);
   return (
     <div className="w-full rounded-lg bg-white h-auto flex flex-col ">
       <div className="image">
@@ -12,12 +14,18 @@ const Post = () => {
         />
       </div>
       <div className="icons flex w-[50%] justify-evenly my-5 ">
-        <BsHeart size={40} />
-        <BsFillHeartFill size={40} color="red" className="hidden" />
-        <FaRegCommentDots size={40} />
-        <FiShare2 size={40} />
+        {!like && <BsHeart size={30} onClick={() => setlike(true)} />}
+        {like && (
+          <BsFillHeartFill
+            size={30}
+            color="#FF812C"
+            onClick={() => setlike(false)}
+          />
+        )}
+        <FaRegCommentDots size={30} />
+        <FiShare2 size={30} />
       </div>
-      <div className="text ml-4">
+      <div className="text ml-6 mb-8">
         <p className="text-xl text-gray-400">2000 Likes</p>
         <p className="font-semibold text-xl">
           <span className="text-xl font-bold">Maryam</span> Party Time :)
