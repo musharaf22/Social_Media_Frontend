@@ -4,7 +4,7 @@ const PeopleCard = () => {
   return (
     <div
       id="postScroll"
-      className="bg-white w-full  rounded-xl p-3 h-[230px] overflow-auto"
+      className="bg-white w-full  rounded-xl p-3 h-[230px] overflow-auto shadow-xl"
     >
       {[1, 2, 3, 4, 5].map(() => {
         return (

@@ -5,7 +5,7 @@ import { FiShare2 } from "react-icons/fi";
 const Post = () => {
   const [like, setlike] = useState<boolean>(false);
   return (
-    <div className="w-full rounded-lg bg-white h-auto flex flex-col ">
+    <div className="w-full rounded-lg bg-white h-auto flex flex-col shadow-xl mb-6 ">
       <div className="image">
         <img
           src="/images/postpic2.jpg"

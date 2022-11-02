@@ -2,7 +2,7 @@ import React from "react";
 
 const ProfileCard = () => {
   return (
-    <div className="bg-white rounded-2xl border w-full h-[50vh]">
+    <div className="bg-white rounded-2xl border w-full h-[50vh] shadow-xl">
       <div className="cover relative">
         <img
           src="/images/cover.jpg"
