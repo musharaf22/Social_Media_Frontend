@@ -13,6 +13,20 @@ const Right = () => {
         <AiOutlineSetting size={30} className="hover:text-[#FF812C]" />
         <BiLogOut size={30} className="hover:text-[#FF812C]" />
       </div>
+      <div className="rightContent bg-white w-[90%] ml-4 h-[70vh] my-4 rounded-3xl p-6 shadow-xl">
+        <p className="font-bold text-xl my-3 ml-3">Trends For You</p>
+        {[1, 2, 3, 4, 5, 6].map((x) => {
+          return (
+            <div className="m-4">
+              <p className="text-lg font-bold">Minions</p>
+              <p className="text-md text-gray-400">#12.1K Shares</p>
+            </div>
+          );
+        })}
+      </div>
+      <button className="p-4 text-white bg-[#FFB12C] ml-4 w-[90%] rounded-xl">
+        Find Friends
+      </button>
     </div>
   );
 };
