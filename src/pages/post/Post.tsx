@@ -1,14 +1,27 @@
-import React from "react";
-
+import { BsFillHeartFill, BsHeart } from "react-icons/bs";
+import { FaRegCommentDots } from "react-icons/fa";
+import { FiShare2 } from "react-icons/fi";
 const Post = () => {
   return (
-    <div className="w-full rounded-lg bg-red-400 h-[500px] flex flex-col">
+    <div className="w-full rounded-lg bg-white h-[500px] flex flex-col">
       <div className="image">
-        {/* <img
-          src="/images/postpic1.jpg"
+        <img
+          src="/images/postpic2.jpg"
           alt="N/A"
-          className="w-full h-[200px]"
-        /> */}
+          className="w-full h-auto rounded-lg"
+        />
+      </div>
+      <div className="icons flex w-[50%] justify-evenly my-5 ">
+        <BsHeart size={40} />
+        <BsFillHeartFill size={40} color="red" className="hidden" />
+        <FaRegCommentDots size={40} />
+        <FiShare2 size={40} />
+      </div>
+      <div className="text ml-4">
+        <p className="text-xl text-gray-400">2000 Likes</p>
+        <p className="font-semibold text-xl">
+          <span className="text-xl font-bold">Maryam</span> Party Time :)
+        </p>
       </div>
     </div>
   );
