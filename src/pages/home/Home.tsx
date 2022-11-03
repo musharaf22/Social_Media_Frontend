@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import apiService from "../../services/rest";
 import Left from "../left/Left";
 import Post from "../post/Post";
 import Right from "../right/Right";
 
 const Home = () => {
+  const [data, setData] = useState();
+  const getData = async () => {
+    const meta = await apiService("/user", "get");
+    console.log("meta = ", meta);
+  };
+  useEffect(() => {
+    getData();
+  }, []);
   return (
     <div className="flex justify-between">
       <div className="w-[20%]">
