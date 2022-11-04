@@ -24,3 +24,13 @@ code {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+.login{
+  /* background: url("https://bestanimations.com/media/many-hearts/1987903398small-gold-hearts-pattern-animated-gif-image.gif"); */
+ /* background: url('https://wallpaperaccess.com/full/1153010.jpg'); */
+ /* background: linear-gradient(#FFDD00,#FBB034); */
+ background-color: black;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  z-index: -1;
+}
