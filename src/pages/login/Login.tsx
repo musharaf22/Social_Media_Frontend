@@ -1,13 +1,25 @@
+import { useMutation } from "@tanstack/react-query";
 import { toast } from "material-react-toastify";
-import React, { useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import apiService from "../../services/rest";
 import { loginService } from "../../services/services";
 
 const Login = () => {
+  const navigate = useNavigate();
   const [formData, setfromData] = useState({
     email: "",
     password: "",
+  });
+
+  const loginMuation = useMutation(loginService, {
+    onSuccess(data) {
+      toast.warning("Logged in successfully!");
+      localStorage.setItem("token", JSON.stringify(data.data.token));
+      navigate("/home");
+    },
+    onError(err: any) {
+      toast.error(err.response.data.message);
+    },
   });
 
   const handleChange = (e: any) => {
@@ -16,17 +28,10 @@ const Login = () => {
       return { ...prev, [name]: value };
     });
   };
-  const navigate = useNavigate();
+
   const handleLogin = async (e: any) => {
     e.preventDefault();
-    const data = await loginService(formData);
-    if (!!data && data?.error) {
-      toast.error(data.message);
-    } else {
-      toast.warning("Logged in successfully!");
-      localStorage.setItem("token", JSON.stringify(data.token));
-      navigate("/home");
-    }
+    loginMuation.mutate(formData);
   };
   return (
     <div className="login flex justify-center items-center ">
