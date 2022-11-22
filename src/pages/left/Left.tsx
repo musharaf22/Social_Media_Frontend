@@ -1,6 +1,7 @@
 import Navbar from "../../components/Navbar";
 import PeopleCard from "../../components/PeopleCard";
 import ProfileCard from "../../components/ProfileCard";
+import { IProfile } from "../../models/profileInterface";
 
 const Left = () => {
   return (

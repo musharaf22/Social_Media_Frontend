@@ -1,6 +1,18 @@
-import React from "react";
+import { useQuery } from "@tanstack/react-query";
+import { IProfile } from "../models/profileInterface";
+import { getUserProfile } from "../services/services";
 
 const ProfileCard = () => {
+  const { data: profileData, isLoading } = useQuery(
+    ["profileData"],
+    getUserProfile,
+    {
+      select(filter) {
+        return filter.data;
+      },
+    }
+  );
+  console.log("Profile Card = ", profileData);
   return (
     <div className="bg-white rounded-2xl border w-full h-[50vh] shadow-xl">
       <div className="cover relative">
@@ -18,16 +30,24 @@ const ProfileCard = () => {
         </div>
       </div>
       <div className="content mt-[20%]">
-        <p className="font-bold text-lg text-center ">Kareena Kapoor</p>
+        <p className="font-bold text-lg text-center capitalize ">
+          {!!profileData ? profileData?.data?.name : "Kareena Kapoor"}
+        </p>
         <p className="text-lg text-center text-gray-400">Bollywood Actress</p>
         <div className="followers my-4">
           <hr className="border-2 border-b-gray-400" />
           <div className="flex justify-between p-2">
             <p className="text-center border-r border-r-gray-400 w-[50%]  ">
-              <p className="text-gray-400 ">1091</p>Friends
+              <p className="text-gray-400 ">
+                {!!profileData ? profileData.totalFriends : "1091"}
+              </p>
+              Friends
             </p>
             <p className="text-center mr-4">
-              <p className="text-gray-400">1091</p>Requested
+              <p className="text-gray-400">
+                {!!profileData ? profileData.totalReq : "1091"}
+              </p>
+              Requested
             </p>
           </div>
           <hr className="border-2 border-b-gray-400 " />
